@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table >
+                <thead>
+                    <tr>
+                        <th>Liste de Pulls</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let pull of pulls">
+                    <tr >
+                        <td>{{pull.idPull}}</td>
+                        <td>{{pull.marquePull}}</td>
+                        <td>{{pull.matierePull}}</td>
+                        <td>{{pull.prixPull}}</td>
+                        <td>{{pull.dateFabrication | date:'dd/MM/yyyy'}}</td>
+                        <td><a class="btn btn-danger" (click)="supprimerPull(pull)">Supprimer</a></td>
+                        <td><a class="btn btn-success" [routerLink]="['/updatePull',pull.idPull]">Modifier</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

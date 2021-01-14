@@ -1,0 +1,42 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Pull :</h2>
+    </div>
+
+    <form >
+        
+        
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >ID Pull</label>
+            <input type="text" [(ngModel)]="newPull.idPull"
+            name="idPull" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >Marque Pull</label>
+            <input type="text"[(ngModel)]= "newPull.marquePull"
+                name="marquePull" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >Matiere Pull</label>
+            <input type="text"[(ngModel)]= "newPull.matierePull"
+                name="matierePull" class="form-control">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >Prix Pull</label>
+            <input type="number" [(ngModel)]= "newPull.prixPull"
+                name="prixPull" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label >Date Fabrication</label>
+            <input type="date" [(ngModel)]= "newPull.dateFabrication"
+                name="dateFabrication" class="form-control">
+        </div>
+
+        <div class="mt-2">
+            <button type="submit" (click)="addPull()" class="btn btnsuccess">Ajouter</button>
+        </div>
+    </form></div>
